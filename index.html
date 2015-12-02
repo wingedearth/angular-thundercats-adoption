@@ -14,19 +14,31 @@
 	<body class="container" ng-controller="ThunderController as vm">
 
     <div id="container" class="container">
-      <div class="left-container col-xs-6 dashed">
-        <h2>Thundercats for Adoption</h2>
+      <div class="left-container col-xs-6">
+        <h2>Thundercats at Animal Shelter</h2>
         <ul>
-          <li ng-repeat="cat in vm.thundercats">
+          <li ng-repeat="cat in vm.notAdopted()" class="dashed">
             <h3>My name is {{cat.catName}}</h3>
             <h4>I am a {{cat.gender}} Thundercat.</h4>
-            <img src="{{cat.image}}" width=300><br><br>
-          </li>
+            <h5>I am {{cat.yearsOld}} years old.</h5>
+            <img src="{{cat.image}}"><br><br>
+            <button class="success hover" ng-click="cat.adopted = !cat.adopted">Adopt</button>
         </ul>
       </div> <!-- left container div -->
 
-      <div class="right-container col-xs-6 dashed">
-        <h2>Slain by <br>Mumm-Ra</h2>
+      <div class="right-container col-xs-6">
+        <h2>Adopted by <br>Mumm-Ra</h2>
+        <ul>
+          <li ng-repeat="cat in vm.adopted()" class="dashed">
+            <h3>My name is {{cat.catName}}</h3>
+            <h4>I am a {{cat.gender}} Thundercat.</h4>
+            <h5>I am {{cat.yearsOld}} years old.</h5>
+            <img src="{{cat.image}}"><br><br>
+            <button class="success hover" ng-click="cat.adopted = !cat.adopted">Return to Animal Shelter</button>
+          </li>
+        </ul>
+
+
       </div> <!-- right container div -->
     </div> <!-- main container div -->
 

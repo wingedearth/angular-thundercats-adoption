@@ -13,6 +13,9 @@ body {
 
 .dashed {
   border: dashed;
+  border-radius: 5px;
+  border-color: red;
+  border-width: 1px;
 }
 
 .left-container, .right-container {
@@ -23,17 +26,33 @@ body {
   vertical-align: top;
   margin-top: 10px;
   height: 100%;
+  border-radius: 2px;
 }
 
 .left-container {
+  position: relative;
+  margin-right: auto;
+  margin-left: 0px;
   float: left;
 }
 
 .right-container {
-  float: left;
+  position: relative;
+  float: right;
+  margin-left: auto;
+  margin-right: 0px;
   min-height: 800px;
 }
 
 h2 {
   font-color: yellow;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
 }
