@@ -58,6 +58,7 @@
 
 		vm.notAdopted = notAdopted;
 		vm.adopted = adopted;
+		vm.deleteCat = deleteCat;
 
 		function notAdopted() {
 			return vm.thundercats.filter(function(cat) {
@@ -69,6 +70,16 @@
 			return vm.thundercats.filter(function(cat) {
 				return cat.adopted;
       });
+		}
+
+		// function addCat() {
+
+		// }
+
+		function deleteCat(removeCat) {
+			vm.thundercats = vm.thundercats.filter(function(cat) {
+				return cat.catName !== removeCat.catName;
+			});
 		}
 
 	}

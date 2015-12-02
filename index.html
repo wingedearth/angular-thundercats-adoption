@@ -22,7 +22,8 @@
             <h4>I am a {{cat.gender}} Thundercat.</h4>
             <h5>I am {{cat.yearsOld}} years old.</h5>
             <img src="{{cat.image}}"><br><br>
-            <button class="success hover" ng-click="cat.adopted = !cat.adopted">Adopt</button>
+            <button ng-click="cat.adopted = !cat.adopted">Adopt</button>
+            <button class="destroy" ng-click="vm.deleteCat(cat)">Euthanize</button>
         </ul>
       </div> <!-- left container div -->
 
@@ -34,7 +35,9 @@
             <h4>I am a {{cat.gender}} Thundercat.</h4>
             <h5>I am {{cat.yearsOld}} years old.</h5>
             <img src="{{cat.image}}"><br><br>
-            <button class="success hover" ng-click="cat.adopted = !cat.adopted">Return to Animal Shelter</button>
+            <button ng-click="cat.adopted = !cat.adopted">Return to Animal Shelter</button>
+            <button class="destroy" ng-click="vm.deleteCat(cat)">Euthanize</button>
+            <br><br>
           </li>
         </ul>
 
