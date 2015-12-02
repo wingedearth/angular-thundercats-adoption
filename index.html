@@ -11,9 +11,35 @@
     crossorigin="anonymous">
 	</head>
 
-	<body class="container" ng-controller="ThunderController as vm">
+	<body ng-controller="ThunderController as vm">
 
-    <div id="container" class="container">
+
+
+    <div class="container top">
+      <div class="left-container col-xs-6"><h1>Adopt a Thundercat!</h1></div>
+      </div>
+      <div class="right-container col-xs-6">
+        <form>
+          <h2>Send a new Thundercat to the Animal Shelter:</h2>
+          <input ng-model="vm.newCat.catName"
+                 id="darken-text"
+                 class="shade" type="text" placeholder='Name the Thundercat'>
+          <input ng-model="vm.newCat.yearsOld"
+                 id="darken-text"
+                 class="shade" type="text" placeholder='Age'>
+          <input ng-model="vm.newCat.gender"
+                 id="darken-text"
+                 class="shade" type="text" placeholder='Gender'>
+          <input ng-model="vm.newCat.image"
+                 id="darken-text"
+                 class="shade" type="text" placeholder='Image Link'>
+          <button ng-click="vm.addCat()">Add</button>
+        </form>
+      </div> <!-- Form Div -->
+    </div> <!-- Top div -->
+
+
+    <div class="container bottom" id="container">
       <div class="left-container col-xs-6">
         <h2>Thundercats at Animal Shelter</h2>
         <ul>
