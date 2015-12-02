@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html ng-app='thunderApp'>
+	<head>
+		<title>Adopt a Thundercat</title>
+		<link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+	</head>
+
+	<body class="container" ng-controller="ThunderController as vm">
+
+    <div id="container" class="container">
+      <div class="left-container col-xs-6 dashed">
+        <h2>Thundercats for Adoption</h2>
+        <ul>
+          <li ng-repeat="cat in vm.thundercats">
+            <h3>My name is {{cat.catName}}</h3>
+            <h4>I am a {{cat.gender}} Thundercat.</h4>
+            <img src="{{cat.image}}" width=300><br><br>
+          </li>
+        </ul>
+      </div> <!-- left container div -->
+
+      <div class="right-container col-xs-6 dashed">
+        <h2>Slain by <br>Mumm-Ra</h2>
+      </div> <!-- right container div -->
+    </div> <!-- main container div -->
+
+	</body>
+
+	  <script src="/js/angular.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/ThunderController.js"></script>
+</html>
