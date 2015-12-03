@@ -10,13 +10,14 @@ body {
 }
 
 .top {
-  position: absolute;
   margin-top: 5px;
+  margin-bottom: 20px;
+  opacity: 50%;
 }
 
 .bottom {
-  position: absolute;
-  margin-top: 200px;
+
+  margin: 0 auto;
 }
 
 .container {
@@ -38,18 +39,18 @@ body {
   display: inline-block;
   background-color: white;
   color: black;
-  border-radius: 2px;
+  border-radius: 5px;
   vertical-align: top;
+  width: 48%;
 }
 
 .left-container {
-  margin-right: auto;
-  margin-left: 0px;
+  margin-right: 4%;
 
 }
 
 .right-container {
-  float: right;
+  margin-left: 4%;
 }
 
 h2 {
@@ -65,3 +66,12 @@ img {
   width: 100%;
   border: 1px solid black;
 }
+
+.col-xs-6 {
+  width:46%;
+}
+
+ul {
+  padding-left: 0px;
+}
+
